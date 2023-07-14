@@ -7,11 +7,11 @@ export function Car(props) {
   const gltf = useLoader(
     GLTFLoader,
 
-    process.env.PUBLIC_URL + "models/volvo/scene.gltf"
+    process.env.PUBLIC_URL + "models/car/scene.gltf"
   );
 
   useEffect(() => {
-    gltf.scene.scale.set(0.9, 0.9, 0.9);
+    gltf.scene.scale.set(0.005, 0.005, 0.005);
 
     gltf.scene.position.set(0, -0.0035, 0);
     gltf.scene.traverse((object) => {
@@ -28,10 +28,10 @@ export function Car(props) {
 
     let group = gltf.scene.children[0].children[0].children[0];
 
-    group.children[16].rotation.x = t;
-    group.children[17].rotation.x = t;
-    group.children[18].rotation.x = t;
-    group.children[19].rotation.x = t;
+    group.children[0].rotation.x = t;
+    group.children[2].rotation.x = t;
+    group.children[4].rotation.x = t;
+    group.children[6].rotation.x = t;
   });
 
   return <primitive object={gltf.scene} />;
