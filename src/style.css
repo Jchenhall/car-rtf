@@ -1,0 +1,36 @@
+html,
+body,
+#root,
+canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.buttonGroup {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translate(375%, 100%);
+  z-index: 1000;
+}
+
+.button1 {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #fff;
+  background-color: aqua;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+.button2 {
+  background-color: red;
+  color: #fff;
+  font-size: 2rem;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
